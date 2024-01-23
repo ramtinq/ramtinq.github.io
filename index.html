@@ -111,32 +111,61 @@
                             </div>
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
+                            <!--<div class="swiper-pagination" style="position: static;"></div>-->
                         </div>
   
                     </div>
                     <div class="w3-col s12 m6">
-                        <div style="padding-top:56.21%"><iframe src="https://player.vimeo.com/video/564164731?h=04c7245c97&autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                        <div class="swiper vimeo-swiper" data-button="waves-1-button">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide ram-youtube-container ram-full-bg" style="background-image: url('/images/scorings/WW_Cover_1080p_no_text.jpg');">
+
+                              </div>
+                              <div id="test-vimeooo" class="swiper-slide ram-youtube-container vimeo-container" >
+                                <iframe src="https://player.vimeo.com/video/564164731?h=04c7245c97&autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                              </div>
+                             
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <!--<div class="swiper-pagination" style="position: static;"></div>-->
+                        </div>
+
+                    </div>
+                    <div class="w3-col s12 m6">
+                        
+                        <button id="waves-1-button" class="btn btn-danger paused fa fa-play"> <span class="ram-font-orbitron">Play Waves of Silence</span></button>
                     </div>
                 </div>
+                
             </div>
         </div>
         </main>
 
     </div>
 
-    <style>
-     .swiper-slide {
-      background-position: center;
-      background-size: cover;
+<style>
+    .swiper-slide {
+    background-position: center;
+    background-size: cover;
 
     }
+</style>
 
-    </style>
 
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+
+
+
+
+</script>
 <script>
 function playYoutube(el) {
-    
+    if(typeof(el) === 'String')
+    {
+        el = document.getElementById(el);
+    }
     loadVideo(el);
 }
 
@@ -170,9 +199,56 @@ var loadVideo = function(element) {
       },
     });
 
+
+
+    var vimeoSwipers = document.getElementsByClassName('vimeo-swiper');
+    for(var i = 0; i<vimeoSwipers.length; i++) {
+        let swiper = new Swiper(vimeoSwipers[i], {
+            effect: "flip",
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        const button = document.getElementById(vimeoSwipers[i].dataset.button);
+
+        const iframe = vimeoSwipers[i].getElementsByTagName('iframe')[0];
+        const player = new Vimeo.Player(iframe);
+
+        player.on('play', function() {
+            button.classList.replace('fa-play', 'fa-pause');
+            button.classList.replace('paused', 'playing');
+            swiper.slideTo(1);
+        });
+        player.on('pause', function() {
+            button.classList.replace('fa-pause', 'fa-play');
+            button.classList.replace('playing', 'paused');
+            swiper.slideTo(0);
+        });
+        player.getVideoTitle().then(function(title) {
+            console.log('title:', title);
+        });
+
+        button.addEventListener('click', function() {
+            if(button.classList.contains('paused')) {
+                player.play();
+            }
+            else {
+                player.pause();
+            }
+        });
+        
+    }
+
     
 </script>
 
     <script src="/js/bootstrap.min.js"></script>
+    
 </body>
 </html>

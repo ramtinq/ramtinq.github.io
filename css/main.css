@@ -716,6 +716,9 @@ jdp-container {
 .ram-apple-grey {
     background-color: #fafafa;
 }
+.ram-apple-black {
+    background-color: #1c1a19;
+}
 
 .ram-cursor-default {
     cursor: default !important;
