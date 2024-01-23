@@ -1,1 +1,178 @@
-Hello Worldxx
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ramtin Didab</title>
+    <meta name="description" content="">
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+
+    <!-- Styles -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/my-w3.css" rel="stylesheet">
+    <link href="/icons/font-awesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- For all browsers -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/vendor/logo/small/MyHormuz_logo_32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/vendor/logo/small/MyHormuz_logo_16.png">
+    <!-- For Google and Android -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/vendor/logo/small/MyHormuz_logo_48_chrome.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/vendor/logo/small/MyHormuz_logo_192_android.png">
+    <!-- For iPad -->
+    <link rel="apple-touch-icon" type="image/png" sizes="167x167" href="/images/vendor/logo/small/MyHormuz_logo_167_ipdad.png">
+    <!-- For iPhone -->
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/images/vendor/logo/small/MyHormuz_logo_180_iphone.png">
+    <meta name="apple-mobile-web-app-title" content="{!! config('app.name') !!}">
+
+</head>
+<body class="ram-ltr">
+    <div id="app" class="">
+        <nav class="navbar navbar-expand-md navbar-dark w3-text-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="/"><div id="navbar-logo" class="ram-full-bg align-middle" style="background-image: url('/images/vendor/logo/MyHormuz_logo_1000.png');"></div></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".topmenu-items" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('lang.togglenavigation') }}">
+                    <span class="navbar-toggler-icon" style="width:1rem"></span>
+                </button>
+                <div class="collapse navbar-collapse topmenu-items ">
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ram-auto-ml">
+                        <li class="nav-item"><a class="nav-link" href="/ads">Who Is Ramtin?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/businesses">Works in Progress</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/products">Media Scorings</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/events/current-events">Musics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/events/current-events">Visual Artworks</a></li>
+                    </ul>
+
+                    
+
+                </div>
+            </div>
+        </nav>
+        <main class="py-0">
+        <div id="bio-darreh-parent">
+            <div id="bio-darreh-bg-parent">
+                <div id="bio-darreh-img"></div>
+            </div>
+            <div class="container">
+                <div id="bio-darreh-text" class="px-4 pt-5 w3-text-dark-grey"">
+                    <h1 class="ram-font-oswald-bold">Who is Ramtin?</h1>
+                    <p class="ram-justify-text">
+                        A musician who is mostly passionate about film & video game music, currently living in the Netherlands.
+                        Studied Physics at university, and became a computer programmer and worked in a few failed startups! After graduation, started composing Cinematic style Hybrid-Orchestral musics.
+                        In recent years he moved to live in a very special place, the Hormuz island. It was there that all his previous, completely material views changed, and he became more involved in Art, Philosophy and Spirituality.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-4 container">
+            <div class=""><h1 class="ram-font-oswald w3-center py-3 ">COMPOSITIONS & TRACKS</h1></div>
+            <p class="pt-4" >
+                A musician who is mostly passionate about film & video game music, currently living in the Netherlands.
+                Studied Physics at university, and became a computer programmer and worked in a few failed startups! After graduation, started composing Cinematic style Hybrid-Orchestral musics.
+                In recent years he moved to live in a very special place, the Hormuz island. It was there that all his previous, completely material views changed, and he became more involved in Art, Philosophy and Spirituality.
+            </p>
+
+            <div class=""><h1 class="ram-font-orbitron w3-center py-4">MEDIA SCORINGS</h1></div>
+            <div class="w3-white">
+                <div class="ram-rtl w3-row" style="background-color: #d5d5d5">
+                    <div class="w3-col s12 m6">
+                        <div class="ram-ltr py-4 px-5">
+                            <h2 class="w3-center ram-font-WW"><span class="">WESTWORLD</span>
+                                <span class="d-block py-3 w3-text-dark-grey w3-small">SCORING COMPETITION 2020</span>
+                            </h3>
+                            <p class="py-2">
+                                Hosted by Spitfireaudio and HBO, a 5 minutes clip of the television show from episode 3 season 5 where provided to be scored, with its original soundtrack removed.
+                            </p>
+                            <div><button class="btn btn-primary" onclick="slideAndPlay(wwSwiper)">Play!</button></div>
+                        </div>
+                    </div>
+                    <div class="w3-col s12 m6">
+                        <div id="wwSwiper" class="swiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide ram-youtube-container ram-full-bg" style="background-image: url('/images/scorings/WW_Cover_1080p_no_text.jpg');">
+
+                              </div>
+                              <div id="test" class="swiper-slide youtube ram-youtube-container" data-id="SrbcdCW8qL8">
+                                <iframe src="https://www.youtube.com/embed/SrbcdCW8qL8?si=ChJKNZwIwQlq05Xx&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                              </div>
+                             
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+  
+                    </div>
+                    <div class="w3-col s12 m6">
+                        <div style="padding-top:56.21%"><iframe src="https://player.vimeo.com/video/564164731?h=04c7245c97&autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+
+    </div>
+
+    <style>
+     .swiper-slide {
+      background-position: center;
+      background-size: cover;
+
+    }
+
+    </style>
+
+<script>
+function playYoutube(el) {
+    
+    loadVideo(el);
+}
+
+var loadVideo = function(element) {
+    var iframe = document.createElement("iframe");
+    iframe.setAttribute("src", "https://www.youtube.com/embed/" + element.getAttribute("data-id") + "?autoplay=1");
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "1");
+    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+    element.appendChild(iframe);
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+<script>
+    function slideAndPlay(swpr) {
+        playYoutube(swpr.el.getElementsByClassName('youtube')[0]);
+        swpr.slideNext();
+    }
+    var wwSwiper = new Swiper("#wwSwiper", {
+      effect: "flip",
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    
+</script>
+
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
