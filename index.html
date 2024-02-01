@@ -17,8 +17,8 @@
 
     <!-- Styles -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
     <link href="/css/my-w3.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
     <link href="/icons/font-awesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -37,39 +37,36 @@
 </head>
 <body class="ram-ltr">
     <div id="app" class="">
-        <nav class="navbar navbar-expand-md navbar-dark w3-text-white shadow-sm">
+        <nav id="top-menu" class="navbar navbar-expand-md navbar-dark w3-text-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="/"><div id="navbar-logo" class="ram-full-bg align-middle" style="background-image: url('/images/vendor/logo/MyHormuz_logo_1000.png');"></div></a>
-
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".topmenu-items" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('lang.togglenavigation') }}">
                     <span class="navbar-toggler-icon" style="width:1rem"></span>
                 </button>
                 <div class="collapse navbar-collapse topmenu-items ">
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ram-auto-ml">
-                        <li class="nav-item"><a class="nav-link" href="/ads">Who Is Ramtin?</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/businesses">Works in Progress</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/products">Media Scorings</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/events/current-events">Musics</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/events/current-events">Visual Artworks</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#who-is-ramtin">Who Is Ramtin?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#works-in-progress">Works in Progress</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#media-scorings">Media Scorings</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#musics">Musics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#visual-arts">Visual Artworks</a></li>
                     </ul>
-
-                    
-
                 </div>
             </div>
         </nav>
-        <main class="py-0">
+        <main id="page-content" class="py-0">
         <div id="bio-darreh-parent">
             <div id="bio-darreh-bg-parent">
                 <div id="bio-darreh-img"></div>
             </div>
             <div class="container">
+                <span id="who-is-ramtin" class="anchor"></span>
                 <div id="bio-darreh-text" class="px-4 pt-5 w3-text-dark-grey"">
                     <h1 class="ram-font-oswald-bold">Who is Ramtin?</h1>
                     <p class="ram-justify-text">
-                        A musician who is mostly passionate about film & video game music, currently living in the Netherlands.
-                        Studied Physics at university, and became a computer programmer and worked in a few failed startups! After graduation, started composing Cinematic style Hybrid-Orchestral musics.
+                        A musician who is mostly passionate about film & video game music, currently studying Music Technology Master's at <a target="_blank" href="https://www.hku.nl/">HKU university</a> in the Netherlands.
+                        After graduation in Physics BSc. and being a software developer in a few startups, started composing Cinematic style Hybrid-Orchestral musics.
                         In recent years he moved to live in a very special place, the Hormuz island. It was there that all his previous, completely material views changed, and he became more involved in Art, Philosophy and Spirituality.
                     </p>
                 </div>
@@ -77,171 +74,449 @@
         </div>
 
         <div class="pt-4 container">
-            <div class=""><h1 class="ram-font-oswald w3-center py-3 ">COMPOSITIONS & TRACKS</h1></div>
-            <p class="pt-4" >
+            <div class="pt-4 pb-4"><h1 class="ram-font-oswald w3-center">COMPOSITIONS & TRACKS</h1></div>
+            <p class="pt-2">
                 A musician who is mostly passionate about film & video game music, currently living in the Netherlands.
                 Studied Physics at university, and became a computer programmer and worked in a few failed startups! After graduation, started composing Cinematic style Hybrid-Orchestral musics.
                 In recent years he moved to live in a very special place, the Hormuz island. It was there that all his previous, completely material views changed, and he became more involved in Art, Philosophy and Spirituality.
             </p>
-
-            <div class=""><h1 class="ram-font-orbitron w3-center py-4">MEDIA SCORINGS</h1></div>
-            <div style="background-color: #d5d5d5">
+            <span id="media-scorings" class="anchor"></span>
+            <div class="pt-4 pb-4"><h1 class="ram-font-orbitron w3-center">MEDIA SCORINGS</h1></div>
+            <div class="ram-apple-grey text-black">
                 <div class="ram-rtl w3-row">
                     <div class="w3-col s12 m6">
                         <div class="ram-ltr py-4 px-5">
                             <h2 class="w3-center ram-font-WW"><span class="">WESTWORLD</span>
-                                <span class="d-block py-3 w3-text-dark-grey w3-small">SCORING COMPETITION 2020</span>
-                            </h3>
+                                <span class="d-block py-3 text-secondary w3-small">SCORING COMPETITION 2020</span>
+                            </h2>
                             <p class="py-2">
                                 Hosted by Spitfireaudio and HBO, a 5 minutes clip of the television show from episode 3 season 5 where provided to be scored, with its original soundtrack removed.
                             </p>
-                            <div><button class="btn btn-primary" onclick="slideAndPlay(wwSwiper)">Play!</button></div>
+                            <div class="w3-center pt-3"><button id="Westworld-button" class="btn btn-outline-secondary paused fa fa-play"><span class="ram-font-orbitron"></span></button></div>
                         </div>
                     </div>
                     <div class="w3-col s12 m6">
-                        <div id="wwSwiper" class="swiper">
+                        <div class="swiper youtube-swiper" data-effect="flip" data-button="Westworld-button">
                             <div class="swiper-wrapper">
-                              <div class="swiper-slide ram-youtube-container ram-full-bg" style="background-image: url('/images/scorings/WW_Cover_1080p_no_text.jpg');">
-
+                              <div class="swiper-slide ram-videoplayer-container ram-full-bg" style="background-image: url('/images/scorings/westworld-scoring-competition-2020/WW_Cover_1080p_no_text.jpg');"></div>
+                              <div class="swiper-slide ram-videoplayer-container swiper-youtube-player-container" data-ytid="SrbcdCW8qL8">
+                                <div class="player"></div>
                               </div>
-                              <div id="test" class="swiper-slide youtube ram-youtube-container" data-id="SrbcdCW8qL8">
-                                <iframe src="https://www.youtube.com/embed/SrbcdCW8qL8?si=ChJKNZwIwQlq05Xx&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                              </div>
-                             
                             </div>
+                            <!--
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
-                            <!--<div class="swiper-pagination" style="position: static;"></div>-->
+                            <div class="swiper-pagination" style="position: static;"></div>-->
                         </div>
-  
                     </div>
-                </div>
-
-                <div class="ram-rtl w3-row">
-                    <div class="w3-col s12 m6">
-                        <div class="swiper vimeo-swiper" data-button="waves-1-button">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide ram-youtube-container ram-full-bg" style="background-image: url('/images/scorings/WW_Cover_1080p_no_text.jpg');">
-
-                              </div>
-                              <div id="test-vimeooo" class="swiper-slide ram-youtube-container vimeo-container" >
-                                <iframe src="https://player.vimeo.com/video/564164731?h=04c7245c97&autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                              </div>
-                             
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <!--<div class="swiper-pagination" style="position: static;"></div>-->
-                        </div>
-
-                    </div>
-                    <div class="w3-col s12 m6">
-                        
-                        <div class="w3-center p-4"><button id="waves-1-button" class="btn btn-danger paused fa fa-play"> <span class="ram-font-orbitron">Play Waves of Silence</span></button></div>
-
-                    </div>
-
                 </div>
                 <div class="w3-row">
                     <div class="w3-col s12 m6">
-                        
-                        <div class="p-4">shiiiiity bullshiiiit</div>
-                        <div class="p-4">shiiiiity bullshiiiit</div>
-                        <div class="p-4">shiiiiity bullshiiiit</div>
-                        <div class="p-4">shiiiiity bullshiiiit</div>
+                        <div class="py-4 px-5">
+                            <p class="py-2">
+                                In this scene, Caleb (Aaron Paul) is on a psychedelic drug unintentionally, and as his trip is being started, he is also falling in love with Dolores (Evan Rachel Wood). The scene is full of chasing and gun fighting actions, and because of the trip, it has lots of mood changes.
+                            </p>
+                            <h4 class="ram-font-oswald-bold py-2 w3-center">What was the criteria?</h4>
+                            <p class="py-2">
+                                The criteria <a target="_blank" href="https://web.archive.org/web/20200507065857/https://www.spitfireaudio.com/westworld/terms-and-conditions/">was stated</a> to be:<br><br>
+                                <i>“enhancement of the viewing experience, creative inventiveness, adding emotion, and the ability to add to the storytelling of the clip.”</i>
+                            </p>
+                            <h4 class="ram-font-oswald-bold py-2 w3-center">What did I do?</h4>
+                            <p class="py-2">
+                                Although the result speaks for itself, there are a few technical features worth to mention:
+                            </p>
+                            <ul>
+                                <li><b>Creating Musical Theme:</b> Although the whole scene was only 5 minutes long, I introduced and incorporated a theme throughout the scene up to the ending.</li>
+                                <li><b>Dynamic mood & Instrumentation:</b> Caleb was experiencing mood changes, and in some scenes the picture appears to be focusing more on his emotions for Dolores, and then back to the gun fight and chasing.</li> 
+                                <li><b>Dynamic Rhythm & Tempo:</b> Since the scene contained lots of fast actions, making the music to be more synced to the shots boosted the excitement of the viewer, and it required many changes of rhythm and tempo throughout the scene.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w3-col s12 m6">
+                        <div class="ram-videoplayer-container ram-full-bg" style="background-image: url('/images/scorings/westworld-scoring-competition-2020/WW_Calob_Eyes.jpg');"></div>
+                    </div>
+                    <div class="w3-col s12 m6">
+                        <div class="py-4 px-5">
+                            <h4 class="ram-font-oswald-bold py-2 w3-center">The Competition’s Results</h4>
+                            <p class="w3-center">
+                                <b>I did not win a place,</b><br>
+                                and there were lots of controversy around the results and the judgment procedure.
+                            </p>
+                            <p>
+                                Initially, it was mentioned in the Spitfire Audio’s website that the judges were to be <a target="_blank" href="https://web.archive.org/web/20200505140141/https://www.spitfireaudio.com/westworld/">J.J. Abrams, Ramin Djawadi, Lisa Joy and Jonathan Nolan</a>. However, at the end they encountered with lots of entries (more than 10,000) and the judging process became unclear, and with the first-place winner’s announcement, more controversial.
+                            </p>
+                            <p>
+                                After a while they even removed the pages related to the competition from their website. However, the whole web were blasted by the critics discussing the results.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                
+
+                <div class="w3-white text-black">
+                    <div class="ram-rtl w3-row">
+                        <div class="w3-col s12 m6 w3-white">
+                            <div class="ram-ltr py-4 px-5">
+                                <h2 class="w3-center pt-4 ram-font-Assasins h1">Assassin’s creed Valhalla</h2>
+                                <h3 class="w3-center ram-font-oswald ram-bold pb-4 text-secondary h5">Official Trailer Rescored for Exercise</h3>
+                                <p>
+                                    As a scoring exercise I removed the sound of the Assassin’s Creed Valhalla’s official trailer, leaving only the dialogues and narrative voices, and rescored it in the HYBRIDWAVE genre, combining epic orchestral elements with old-style electronic aesthetics.
+                                </p>
+                                <div class="w3-center pt-1"><button id="Assasins-button" class="btn btn-outline-secondary paused fa fa-play"><span class="ram-font-orbitron"></span></button></div>
+                            </div>
+                        </div>
+                        <div class="w3-col s12 m6">
+                            <div class="swiper youtube-swiper" data-effect="flip" data-button="Assasins-button">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide ram-videoplayer-container ram-full-bg" style="background-image: url('/images/scorings/assassins-creed-valhalla/Valhalla_Trailer_Youtube_Cover_3.1.1.jpg');"></div>
+                                  <div class="swiper-slide ram-videoplayer-container swiper-youtube-player-container" data-ytid="2GOarf3riuE">
+                                    <div class="player"></div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="w3-center pt-5 ram-font-myanmar ram-text-apple-dark-grey h1"><span class="">Waves of Silence</span></h2>
+                <h3 class="w3-center ram-font-myanmar ram-bold ram-text-apple-dark-grey h5">A short experimental film</h3>
+                <h3 class="w3-center ram-font-oswald ram-bold pt-1 ram-text-apple-dark-grey h5">Music by Ramtin Didab</h3>
+                <p class="pt-3 px-5 ram-content-md">
+                    Directed by <a target="_blank" href="http://www.anitahonart.com/">Anita Honart</a> for her MA graduate project at Konstfack University, under supervision of <a target="_blank" href="http://johannabilling.com/">Johanna Billing</a>. The 3-part short experimental musical film pictures the transformation of the creator from being imprisoned under the vein of words, labels, judgements and thoughts to her real “freed, in the present moment” self.
+                </p>
+                <div class="ram-rtl w3-row pt-4">
+                    <div class="w3-col s12 m6">
+                        <div class="ram-videoplayer-container ram-full-bg" style="background-image: url('/images/scorings/waves-of-silence/Words_mask_in_car.jpg');"></div>
+                    </div>
+                    <div class="w3-col s12 m6" style="float: left;">
+                        <div class="py-4 px-5 ram-ltr">
+                            <h4 class="ram-font-oswald-bold py-2 w3-center">Part I: Iran</h4>
+                            <p class="pt-3 pb-2">
+                                This part is picturing a long trip to Iran, the creator’s homeland, or a dive of the current self into “the past”. 
+                            </p>
+                            <p>
+                                It mostly concentrates on the cultural roots which created those judgments and generally “the veins”.
+                            </p>
+                            <p class="py-2">
+                                Besides displaying some social problems, the whole part is somehow filled with lives full of color.
+                            </p>
+                            <p class="py-2">
+                                One of my original musics titled “<b><a target="_blank" href="https://soundcloud.com/ramtin-didab/in-the-paths-of-hormuz">In the Paths of Hormuz</a></b>” is used as the soundtrack for this part. According to the director:
+                            </p>
+                            <p class="py-2">
+                                “ There was something special about this piece; its form both created a spiritual and cosmic atmosphere as well as somehow resembling Iran’s cultural spirit because of its semi-folk elements. ”
+                            </p>
+                            <div class="w3-center p-4"><button id="waves-1-button" class="btn btn-outline-secondary paused fa fa-play"><span class="ram-font-orbitron"></span></button></div>
+                        </div>
+                    </div>
+
+                    <div class="w3-col s12 m6">
+                        <div class="swiper vimeo-swiper" data-effect="creative" data-button="waves-1-button">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide ram-videoplayer-container ram-full-bg" style="background-image: url('/images/scorings/waves-of-silence/cat_in_mirror.jpg');"></div>
+                              <div class="swiper-slide ram-videoplayer-container vimeo-container" >
+                                <iframe src="https://player.vimeo.com/video/564164731?h=04c7245c97&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-row ram-rtl">
+                    <div class="w3-col s12 m6">
+                        <div class="py-4 px-5 ram-ltr">
+                            <h4 class="ram-font-oswald-bold py-2 w3-center">Part II: Stockholm</h4>
+                            <p class="pt-3 pb-2">
+                                In this part we see Stockholm, where the creator currently lives, from her point of view.
+                            </p>
+                            <p>
+                                A strong contrast is shown in this part, between what we saw in the previous part and the free but cold and full of solitude life in Stockholm.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-col s12 m6">
+                        <div class="swiper vimeo-swiper" data-effect="creative" data-button="waves-2-button">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide ram-videoplayer-container ram-full-bg" style="background-image: url('/images/scorings/waves-of-silence/Woman_on_train.jpg');"></div>
+                              <div class="swiper-slide ram-videoplayer-container vimeo-container w3-black">
+                                <iframe src="https://player.vimeo.com/video/564183611?h=04c7245c97&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-row">
+                    <div class="w3-col s12 m6">
+                        <div class="py-4 px-5 ram-ltr">
+                            <p class="pt-3 pb-2">
+                                I scored this part with the music I wrote for it exclusively.
+                            </p>
+                            <p>At its ending, the music is faded into another track I had previously made, titled “Leaving the Island”. I saw it a perfect match for the shift which happens in the ending.</p>
+                            <div class="w3-center p-4"><button id="waves-2-button" class="btn btn-outline-secondary paused fa fa-play"><span class="ram-font-orbitron"></span></button></div>
+             
+                        </div>
+                    </div>
+                    <div class="w3-col s12 m6">
+                        <div class="ram-videoplayer-container ram-full-bg" style="background-image: url('/images/scorings/waves-of-silence/the_building.jpg');"></div>
+                    </div>
+                </div>
+                <div class="py-4"></div>
+                <h4 class="ram-font-oswald-bold py-2 w3-center">Part III: Utopia</h4>
+                <div class="ram-content-md pt-3 px-5">
+                    <p>The final part displays the liberation stage of the creator’s life, where she goes beyond the judgments of the past, and the current darkness of her life, by coming out of the vein of words and thoughts. The dancing shots are recorded in the Hormuz island.</p>
+                    <p>A music of mine titled “<b><a target="_blank" href="https://soundcloud.com/ramtin-didab/dusk-of-theia">Dusk of Theia</a></b>” is used for the soundtrack of this part, with some variations to make it more fit to the shots.</p>
+                </div>
+
+                <div class="w3-row pt-4">
+                    <div class="w3-col s12 m6">
+                        <div class="ram-videoplayer-container ram-full-bg" style="background-image: url('/images/scorings/waves-of-silence/3_anitas.jpg');"></div>
+                    </div>
+                    <div class="w3-col s12 m6">
+                        <div class="swiper vimeo-swiper" data-effect="creative" data-button="waves-3-button">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide ram-videoplayer-container ram-full-bg" style="background-image: url('/images/scorings/waves-of-silence/Mehdi.jpg');"></div>
+                              <div class="swiper-slide ram-videoplayer-container vimeo-container w3-black">
+                                <iframe src="https://player.vimeo.com/video/564214492?h=04c7245c97&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-center p-4"><button id="waves-3-button" class="btn btn-outline-secondary paused fa fa-play"><span class="ram-font-orbitron"></span></button></div>
+                <div class="w3-row ram-rtl">
+                    <div class="w3-col s12 ram-m-golden-b" >
+                        <div class="ram-videoplayer-container ram-full-bg" style="background-image: url('/images/scorings/waves-of-silence/Face_in_mirror.jpg');"></div>
+                    </div>
+                    <div class="w3-col s12 ram-m-golden-a">
+                        <div class="py-4 px-5 ram-ltr">
+                            <p class="pt-3 pb-2">
+                                The film was played in the <a target="_blank" href="https://konstfack2021.se/master/anita-honart/">konstfack2021</a> event, and it was selected as one of the top 3 works, among all 15 submissions. The work was also <a target="_blank" href="https://sverigesradio.se/avsnitt/1710556#245">reflected in Sveriges Radio</a> (Sweden’s national publicly funded radio) with lots of complements, with my “In the Paths of Hormuz” track being played in the background, described as “indescribable by any words”!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-row ram-rtl">
+                    <div class="w3-col s12 m6">
+                        <div class="ram-videoplayer-container ram-full-bg" style="background-image: url('/images/scorings/waves-of-silence/Sheeps.jpg');"></div>
+                    </div>
+                    <div class="w3-col s12 m6">
+                        <div class="ram-videoplayer-container ram-full-bg" style="background-image: url('/images/scorings/waves-of-silence/Birds_under_shadow.jpg');"></div>
+                    </div>
+                </div>
+                <div class="w3-black">
+                    <div class="pt-5 pb-1"><h2 class="w3-center py-5 m-0 ram-font-oswald-bold h1">JIGSAW</h2></div>
+                    <div class="w3-row ram-rtl">
+                        <div class="w3-col s12 ram-m-golden-b">
+                            <div class="px-5 ram-ltr">
+                                <div class="py-5 w3-hide-small"></div>
+                                <p class="pt-0 pb-2 w3-center ram-text-apple-grey h5">
+                                    My first attempt on scoring<br><br>
+                                    JIGSAW (2017)<br><br>
+                                    Unofficial trailer rescoring
+                                </p>
+                                <div class="w3-center p-4"><button id="jigsaw-button" class="btn btn-outline-secondary paused fa fa-play"><span class="ram-font-orbitron"></span></button></div>
+                            </div>
+                        </div>
+                        <div class="w3-col s12 ram-m-golden-a" >
+                            <div class="swiper youtube-swiper" data-effect="flip" data-button="jigsaw-button">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide ram-videoplayer-container ram-contain-bg" style="background-image: url('/images/scorings/jigsaw/jigsaw_disk_saw.jpg');"></div>
+                                  <div class="swiper-slide ram-videoplayer-container swiper-youtube-player-container" data-ytid="tkJLqWfpSvo">
+                                    <div class="player"></div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-row pt-4">
+                        <div class="w3-col s2 w3-white"><div class="ram-ratio-1-1"></div></div>
+                        <div class="w3-col s2"><div class="ram-ratio-1-1"></div></div>
+                        <div class="w3-col s2 w3-white"><div class="ram-ratio-1-1"></div></div>
+                        <div class="w3-col s2"><div class="ram-ratio-1-1"></div></div>
+                        <div class="w3-col s2 w3-white"><div class="ram-ratio-1-1"></div></div>
+                        <div class="w3-col s2"><div class="ram-ratio-1-1"></div></div>
+                    </div>
+                </div>
+
             </div>
+            <div class="py-4"></div>
+
+           <div class="w3-white">
+                <span id="musics" class="anchor"></span>
+                <div class="pt-5 pb-5"><h1 class="ram-font-oswald w3-center display-4 ram-bold">Musics</h1></div>
+                
+           </dic>
         </div>
+
         </main>
 
     </div>
 
-<style>
-    .swiper-slide {
-    background-position: center;
-    background-size: cover;
 
-    }
-</style>
-
-
-<script src="https://player.vimeo.com/api/player.js"></script>
-<script>
-
-
-
-
-</script>
-<script>
-function playYoutube(el) {
-    if(typeof(el) === 'String')
-    {
-        el = document.getElementById(el);
-    }
-    loadVideo(el);
-}
-
-var loadVideo = function(element) {
-    var iframe = document.createElement("iframe");
-    iframe.setAttribute("src", "https://www.youtube.com/embed/" + element.getAttribute("data-id") + "?autoplay=1");
-    iframe.setAttribute("frameborder", "0");
-    iframe.setAttribute("allowfullscreen", "1");
-    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
-    element.appendChild(iframe);
-};
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://player.vimeo.com/api/player.js"></script>
 
-  <!-- Initialize Swiper -->
 <script>
-    function slideAndPlay(swpr) {
-        playYoutube(swpr.el.getElementsByClassName('youtube')[0]);
-        swpr.slideNext();
-    }
-    var wwSwiper = new Swiper("#wwSwiper", {
-      effect: "flip",
-      grabCursor: true,
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-
-
-
-    var vimeoSwipers = document.getElementsByClassName('vimeo-swiper');
-    for(var i = 0; i<vimeoSwipers.length; i++) {
-        let swiper = new Swiper(vimeoSwipers[i], {
-            effect: "flip",
+    const youtubeButtonPlayText = 'Play';
+    const youtubeButtonPauseText = 'Pause';
+    const vimeoButtonPlayText = 'Play';
+    const vimeoButtonPauseText = 'Pause';
+    const creativeEffectOptions = {
+        prev: {
+          shadow: true,
+          translate: ["-20%", 0, -1],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+    };
+    cubeEffectOptions = {
+        shadow: false,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+    };
+    const allowTouchMove = true;
+    var youtubeSwipers = document.getElementsByClassName('youtube-swiper');
+    for(var i = 0; i<youtubeSwipers.length; i++) {
+        let swiper = new Swiper(youtubeSwipers[i], {
+            effect: youtubeSwipers[i].dataset.effect ?? 'flip',
             grabCursor: true,
+            preventInteractionOnTransition: true,
+            allowTouchMove: allowTouchMove,
             pagination: {
                 el: ".swiper-pagination",
             },
+            cubeEffect: cubeEffectOptions,
+            creativeEffect: creativeEffectOptions,
+            /*
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+            */
+        });
+    }
+
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var youtubeScriptTag = document.createElement('script');
+
+    youtubeScriptTag.src = "https://www.youtube.com/iframe_api";
+    var firstYoutubeScriptTag = document.getElementsByTagName('script')[0];
+    firstYoutubeScriptTag.parentNode.insertBefore(youtubeScriptTag, firstYoutubeScriptTag);
+    
+    function onYouTubeIframeAPIReady() {
+        youtubePlayerContainers = document.getElementsByClassName('youtube-player-container');
+        for(let i = 0; i<youtubePlayerContainers.length; i++) {
+            let el = youtubePlayerContainers[i].getElementsByClassName('player')[0];
+            console.log('creating player!!!');
+            // !important: use let for player or all players would be replaced by the last one!
+            let player = new YT.Player(el, {
+                videoId: youtubePlayerContainers[i].dataset.ytid,
+                playerVars: {
+                    'playsinline': 1,
+                    'rel': 0, 'showinfo': 0, 'ecver': 2,
+                },
+                events: {
+                    'onReady': function (event) {
+                        event.target.playVideo();
+                    },
+                    'onStateChange': function (event) {
+                        if (event.data == YT.PlayerState.PLAYING) {
+                            console.log('playing!');
+                        }
+                    },
+                }
+            });
+        }
+
+        for(let i = 0; i<youtubeSwipers.length; i++) {
+            let button = document.getElementById(youtubeSwipers[i].dataset.button);
+            let buttonSpan = button.querySelector('span');
+            buttonSpan.textContent = youtubeButtonPlayText;
+            let swiper = youtubeSwipers[i].swiper;
+            let ytContainer = youtubeSwipers[i].getElementsByClassName('swiper-youtube-player-container')[0];
+            // !important: use let for player or all players would be replaced by the last one!
+            let player = new YT.Player(ytContainer.getElementsByClassName('player')[0], {
+                videoId: ytContainer.dataset.ytid,
+                playerVars: {
+                    'playsinline': 1,
+                    'rel': 0, 'showinfo': 0, 'ecver': 2,
+                },
+                events: {
+                    'onReady': function (event) {
+                       //event.target.playVideo();
+                    },
+                    'onStateChange': function (event) {
+                        if (event.data == YT.PlayerState.PLAYING) {
+                            swiper.slideTo(1);
+                            button.classList.replace('fa-play', 'fa-pause');
+                            button.classList.replace('paused', 'playing');
+                            buttonSpan.textContent = youtubeButtonPauseText;
+                            window.onscroll = null;
+                        }
+                        else if(event.data == YT.PlayerState.PAUSED) {
+                            button.classList.replace('fa-pause', 'fa-play');
+                            button.classList.replace('playing', 'paused');
+                            buttonSpan.textContent = youtubeButtonPlayText;
+                            
+                            window.onscroll = function() {
+                                youtubeSwipers[i].swiper.slideTo(0);
+                                window.onscroll = null;
+                            }
+                        }
+                    },
+                }
+            });
+            button.addEventListener('click', function() {
+            if(button.classList.contains('paused')) {
+                player.playVideo();
+            }
+            else {
+                player.pauseVideo();
+            }
+        });
+        }
+    }
+
+    /// Vimeo
+    var vimeoSwipers = document.getElementsByClassName('vimeo-swiper');
+    for(let i = 0; i<vimeoSwipers.length; i++) {
+        let swiper = new Swiper(vimeoSwipers[i], {
+            effect: vimeoSwipers[i].dataset.effect ?? 'flip',
+            grabCursor: true,
+            preventInteractionOnTransition: true,
+            allowTouchMove: allowTouchMove,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            cubeEffect: cubeEffectOptions,
+            creativeEffect: creativeEffectOptions,
+            /*
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            */
         });
 
         const button = document.getElementById(vimeoSwipers[i].dataset.button);
+        const buttonSpan = button.querySelector('span');
+        buttonSpan.textContent = vimeoButtonPlayText;
 
         const iframe = vimeoSwipers[i].getElementsByTagName('iframe')[0];
         const player = new Vimeo.Player(iframe);
 
         player.on('play', function() {
+            swiper.slideTo(1);
             button.classList.replace('fa-play', 'fa-pause');
             button.classList.replace('paused', 'playing');
-            swiper.slideTo(1);
+            buttonSpan.textContent = vimeoButtonPauseText;
+            
         });
         player.on('pause', function() {
             button.classList.replace('fa-pause', 'fa-play');
             button.classList.replace('playing', 'paused');
+            buttonSpan.textContent = vimeoButtonPlayText;
             swiper.slideTo(0);
         });
         player.getVideoTitle().then(function(title) {
@@ -256,10 +531,8 @@ var loadVideo = function(element) {
                 player.pause();
             }
         });
-        
     }
 
-    
 </script>
 
     <script src="/js/bootstrap.min.js"></script>
