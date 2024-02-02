@@ -83,7 +83,7 @@ a:hover {
     cursor: pointer;
 }
 
-p, li {
+p, li:not(nav li) {
     text-align: justify;
 }
 ul {
