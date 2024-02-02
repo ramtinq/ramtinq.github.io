@@ -183,6 +183,16 @@ ul {
     float: right;
 }
 
+#ram-albums-table p {
+    height: 72px;
+    text-overflow: ellipsis;
+}
+.ram-row-p5 {
+    padding: 1.5rem !important;
+}
+.ram-row-p5>.w3-col {
+    padding: 1.5rem !important;
+}
 
 .ram-ltr .fa-near-left-dropdown {
     right: 0;
@@ -934,6 +944,10 @@ jdp-container {
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.5rem;
     overflow: hidden;
+}
+.ram-album-card {
+    /*box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;*/
+    border-radius: 6px;
 }
 
 .ram-google-shadow {box-shadow:0 1px 6px rgba(32, 33, 36, 0.28);}
