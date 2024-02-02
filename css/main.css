@@ -66,9 +66,9 @@
 }
 
 body {
-    background-color: #000;
+    background-color: #1b1a17;
     color: #fff;
-    /*font-size: 16px;*/
+    font-size: 16px;
 }
 
 a {
@@ -305,7 +305,6 @@ ul {
     font-weight: bold;
 }
 
-
 .ram-font-esteban {
     font-family: "Esteban" !important;
 }
@@ -329,8 +328,14 @@ ul {
 .ram-font-myanmar {
     font-family: "Myanmar" !important;
 }
+.ram-font-times {
+    font-family: 'Times New Roman', serif !important;
+}
 .ram-bold {
     font-weight: bold;
+}
+.ram-regular {
+    font-weight: 400;
 }
 .ram-fs-normal {
     font-size: 1rem;
@@ -361,10 +366,16 @@ ul {
     color: #5e5e5e!important;
 }
 .ram-apple-black {
-    background-color: #1c1a19!important;
+    background-color: #1b1a17!important;
 }
 .ram-text-apple-black {
-    color: #1c1a19!important;
+    color: #1b1a17!important;
+}
+.ram-apple-orange {
+    background-color: #ed6f2d !important;
+}
+.ram-text-apple-orange {
+    color: #ed6f2d !important;
 }
 
 .ram-text-light-grey {
@@ -465,6 +476,7 @@ ul {
     top: 0;
     left: 0;
     right: 0;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
     background: rgba(20, 20, 21, 0.8);
 }
@@ -476,6 +488,12 @@ ul {
     position: relative;
     top: -3rem;
     visibility: hidden;
+}
+#hopeless-love-bg {
+    background-position: center -95px;
+}
+#hopeless-love-text {
+    color: #000;
 }
 
 #navbar-logo {
@@ -822,6 +840,9 @@ jdp-container {
 .ram-ratio-1-1 {
     padding-top: 100%;
 }
+.ram-ratio-10-16 {
+    padding-top: 62.5% !important;
+}
 
 .ram-ell {
     white-space: nowrap;
@@ -970,64 +991,7 @@ jdp-container {
 }
 
 
-/* media screen size */
-@media (max-width:600px) {
-    .ram-sm-pt-0 {
-        padding-top: 0 !important;
-    }
-    .ram-sm-pb-0 {
-        padding-bottom: 0 !important;
-    }
-    .ram-sm-px-0 {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-    .ram-sm-py-0 {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    .ram-sm-border-0 {
-        border: 0;
-    }
-    #bio-darreh-parent, #bio-darreh-bg-parent {
-        min-height: 28rem;
-    }
-    #bio-darreh-text {
-        margin-top: -28rem;
-    }
-    .w3-col.ram-s-golden-a {
-        width: 61.8%;;
-    }
-    .w3-col.ram-s-golden-b {
-        width: 38.2%;;
-    }
-}
-@media (min-width:601px) {
-    .w3-col.ram-m-golden-a {width: 61.8%;}
-    .w3-col.ram-m-golden-b {
-        width: 38.2%;;
-    }
-}
-@media (min-width:993px){
-    .w3-col.ram-l-golden-a {width: 61.8%;}
-    .w3-col.ram-l-golden-b {
-        width: 38.2%;;
-    }
-}
 
-@media print
-{    
-    .no-print, .no-print *
-    {
-        display: none !important;
-    }
-    #tickets-container {
-        margin: 0 !important;
-    }
-    .ticket {
-        page-break-inside: avoid;
-    }
-}
 /* 
 This is to prevent iOS Safari from zooming when focusing on inputs.
 It's bad behavior since the whole page zooms in and does not
@@ -1041,12 +1005,12 @@ zoom out automatically on focus-out
     }
 }
 input[type=time] {min-width: 4rem;}
+
 /* bootstrap replacements */
-/*
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
-}*/
+    padding-left: 16px;
+    padding-right: 16px;
+}
 
 @media (min-width:576px){.container,.container-sm{max-width:none}}@media (min-width:768px){.container,.container-md,.container-sm{max-width:none}}@media (min-width:992px){.container,.container-lg,.container-md,.container-sm{max-width:960px}}@media (min-width:1200px){.container,.container-lg,.container-md,.container-sm,.container-xl{max-width:1140px}}@media (min-width:1400px){.container,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl{max-width:1320px}}
 
@@ -1159,5 +1123,69 @@ a[aria-expanded] .open-icon, a[aria-expanded] .close-icon {
 }
 
 
+/* media screen size */
+@media (max-width:600px) {
+    .ram-sm-pt-0 {
+        padding-top: 0 !important;
+    }
+    .ram-sm-pb-0 {
+        padding-bottom: 0 !important;
+    }
+    .ram-sm-px-0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .ram-sm-py-0 {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .ram-sm-border-0 {
+        border: 0;
+    }
+    #bio-darreh-parent, #bio-darreh-bg-parent {
+        min-height: 28rem;
+    }
+    #bio-darreh-text {
+        margin-top: -28rem;
+    }
+    .w3-col.ram-s-golden-a {
+        width: 61.8%;;
+    }
+    .w3-col.ram-s-golden-b {
+        width: 38.2%;;
+    }
+    .container {padding-left: 0; padding-right: 0;}
+    #hopeless-love-bg {
+        background-position: center top;
+    }
+    #hopeless-love-text {
+        color: #fff;
+    }
+}
+@media (min-width:601px) {
+    .w3-col.ram-m-golden-a {width: 61.8%;}
+    .w3-col.ram-m-golden-b {
+        width: 38.2%;;
+    }
+}
+@media (min-width:993px){
+    .w3-col.ram-l-golden-a {width: 61.8%;}
+    .w3-col.ram-l-golden-b {
+        width: 38.2%;;
+    }
+}
 
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+    #tickets-container {
+        margin: 0 !important;
+    }
+    .ticket {
+        page-break-inside: avoid;
+    }
+}
 
