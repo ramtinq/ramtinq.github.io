@@ -152,7 +152,6 @@ ul {
 }
 .ram-rtl {
     direction: rtl;
-    font-family: IRANSans;
     text-align: right;
 }
 .ram-rtl .custom-file label.custom-file-label {
@@ -385,6 +384,10 @@ ul {
 }
 .ram-text-apple-black {
     color: #1b1a17!important;
+}
+
+.ram-deep-black {
+    background-color: #0a0a0a!important;
 }
 .ram-apple-orange {
     background-color: #ed6f2d !important;
@@ -952,6 +955,8 @@ jdp-container {
 
 .ram-google-shadow {box-shadow:0 1px 6px rgba(32, 33, 36, 0.28);}
 
+.ram-google-bright-shadow {box-shadow:0 1px 6px rgba(232, 233, 236, 0.28);}
+
 .ram-tooltip {
     position: relative;
     display: inline-block;
@@ -1120,6 +1125,16 @@ a[aria-expanded] .open-icon, a[aria-expanded] .close-icon {
     position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%;
 }
 
+.coverflow-swiper > .swiper-wrapper > .swiper-slide {
+    width: 70% !important;
+}
+
+.thumbs-swiper .ram-videoplayer-container {
+    cursor: pointer;
+    border-radius: 0.25rem;
+    box-shadow:0 1px 6px rgba(132, 133, 136, 0.28);
+}
+
 .swiper-button-prev, .swiper-rtl .swiper-button-next {
     left: 0px !important;
     right: auto !important;
@@ -1181,6 +1196,9 @@ a[aria-expanded] .open-icon, a[aria-expanded] .close-icon {
     .ram-sm-border-0 {
         border: 0;
     }
+    .ram-sm-unround-0 {
+        border-radius: 0rem !important;
+    }
     #bio-darreh-parent, #bio-darreh-bg-parent {
         min-height: 28rem;
     }
@@ -1199,6 +1217,9 @@ a[aria-expanded] .open-icon, a[aria-expanded] .close-icon {
     }
     #hopeless-love-text {
         color: #fff;
+    }
+    .coverflow-swiper > .swiper-wrapper > .swiper-slide {
+        width: 100% !important;
     }
 }
 @media (min-width:601px) {
