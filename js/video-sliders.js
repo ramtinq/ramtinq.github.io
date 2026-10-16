@@ -22,7 +22,7 @@ const coverflowEffectOptions = {
     stretch: 0,
     depth: 100,
     modifier: 1,
-    slideShadows: true,
+    slideShadows: false,
 };
 
 const allowTouchMove = true;
@@ -58,7 +58,7 @@ for(var i = 0; i<swiperWithThumbsWrappers.length; i++) {
         nested: mainSwiperEl.classList.contains('is-nested'),
         thumbs: {
             swiper: thumbsSwiper,
-        }
+        },
         /*
         navigation: {
             nextEl: ".swiper-button-next",
